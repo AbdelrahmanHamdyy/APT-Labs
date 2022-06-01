@@ -17,6 +17,7 @@ public class Server {
 
     public static void main(String[] args) throws IOException {
         System.out.println("------- Server started.. -------");
+        // Make Appointment
         new Thread(() -> {
             try {
                 ServerSocket ss = new ServerSocket(MAKE_APPOINTMENT_PORT);
@@ -27,7 +28,8 @@ public class Server {
                 e.printStackTrace();
             }
         }).start();
-
+        
+        // Cancel Appointment
         new Thread(() -> {
             try {
                 ServerSocket ss = new ServerSocket(CANCEL_APPOINTMENT_PORT);

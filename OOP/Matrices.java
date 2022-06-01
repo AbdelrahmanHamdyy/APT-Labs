@@ -1,5 +1,7 @@
 package com.company;
 
+// Addable Interface
+
 interface Addable {
     Object Add(Object obj);
 }
